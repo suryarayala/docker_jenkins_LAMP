@@ -12,7 +12,6 @@ RUN yum install -y openssh-server openssh-client
 RUN yum install -y passwd httpd mysql mysql-server
 RUN yum install -y php php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml
 # replacing my config file and starting required services
-ADD ./supervisord.conf /etc/supervisord.conf
 RUN service mysqld start
 EXPOSE 22 80 3306
 CMD [/usr/bin/supervisord]
