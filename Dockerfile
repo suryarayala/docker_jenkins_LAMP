@@ -6,7 +6,7 @@ RUN export https_proxy=http://10.10.17.17:3128
 RUN export ftp_proxy=http://10.10.17.17:3128
 #installing required packages
 RUN rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-RUN yum install -y python-pip && pip install pip>=1.4,<1.5 --upgrade
+RUN yum install -y python-pip 
 RUN pip install supervisor
 RUN yum install -y openssh-server openssh-client
 RUN yum install -y passwd httpd mysql mysql-server
