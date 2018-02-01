@@ -14,4 +14,4 @@ RUN yum install -y php php-mysql php-devel php-gd php-pecl-memcache php-pspell p
 # replacing my config file and starting required services
 RUN service mysqld start
 EXPOSE 22 80 3306
-CMD [/usr/bin/supervisord]
+CMD ['/usr/bin/supervisord']
